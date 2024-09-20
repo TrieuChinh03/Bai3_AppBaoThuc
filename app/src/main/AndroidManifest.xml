@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--    Quyền thông báo ( bao gồm android >= 12 - Level Api 31 )    -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
@@ -29,6 +30,7 @@
             </intent-filter>
         </activity>
 
+        <!--    Khai báo các dịch vụ báo thức   -->
         <receiver android:name=".AlarmReceiver" />
         <receiver android:name=".StopAlarmReceiver" />
         <service android:name=".AlarmService" android:foregroundServiceType="mediaPlayback" />
